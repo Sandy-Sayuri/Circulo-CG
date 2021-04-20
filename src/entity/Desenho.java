@@ -11,7 +11,7 @@ public class Desenho extends Path2D.Double {
 	Point2D.Double centro;
 	int quantidadePontos;
 	
-	public Desenho(int aQuantidadePontos) {
+	public Desenho(int aQuantidadePontos) {//aqui define a quantidades de pontos que vai ter o circulo
 		super();
 		this.quantidadePontos = aQuantidadePontos;
 		centro = new Point2D.Double(350, 350);

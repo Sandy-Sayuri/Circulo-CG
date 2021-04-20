@@ -16,13 +16,13 @@ public class Controller {
 	
 	public Controller() {
 		model = new Model();
-		view = new View(model.getDesenho());
+		view = new View(model.getDesenho());//pega o desenho
 		
-		view.adicionaListenerSlide(new MudaSlide());
+		view.adicionaListenerSlide(new MudaSlide());//aqui é onde quando munda o slide muda o desenho 
 	}
 	
 	class MudaSlide implements ChangeListener{
-
+		//implemanta o que está a classe view
 		@Override
 		public void stateChanged(ChangeEvent e) {
 			int quantidadePontos = view.getValorQtd();
@@ -30,8 +30,8 @@ public class Controller {
 			
 			Point2D.Double t = view.getValorT();
 			double a = view.getValorR();
-                        Point2D.Double es=view.getValorE();
-                         Point2D.Double c=view.getValorC();
+            Point2D.Double es=view.getValorE();
+            Point2D.Double c=view.getValorC();
 			
 			Shape desenho;
                     desenho = model.makeTransformacoes(t, a,es,c);
